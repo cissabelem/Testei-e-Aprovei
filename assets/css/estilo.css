@@ -1,7 +1,197 @@
 /* HTML5Doctor Stylesheet Reset */
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;margin:0;padding:0;}body{line-height:1;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}nav ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:none;}a{font-size:100%;vertical-align:baseline;background:transparent;margin:0;padding:0;}ins{background-color:#ff9;color:#000;text-decoration:none;}mark{background-color:#ff9;color:#000;font-style:italic;font-weight:700;}del{text-decoration:line-through;}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help;}table{border-collapse:collapse;border-spacing:0;}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0;}input,select{vertical-align:middle;}
 
+
+/* 1.0 - Geral =========================================== */
+
 body {
-	background: #000;
+	background: #0A0A0A url('../img/layout/background.png');
+
+	font: normal normal 16px/1.5em sans-serif;
 	color: #FFF;
 }
+
+a { text-decoration: none; color: #FFF }
+
+nav ul, nav li { list-style: none }
+nav li { float: left }
+
+
+/* 1.5 - Classes genéricas =============================== */
+
+.hide { display: none }
+.wraper { width: 960px; margin: 0 auto }
+
+/* 2.0 - Topo ============================================ */
+
+nav.breadcrumbs {
+	background: #181818;
+	overflow: hidden;
+	
+	font-size: .7em;
+}
+
+nav.breadcrumbs ul {
+	position: relative;
+	background: #292929;
+	float: left;
+	padding: 0 0 0 10px;
+}
+
+nav.breadcrumbs li {
+	margin-right: 5px;
+	
+	text-shadow: 1px 1px 1px #000;
+}
+
+nav.breadcrumbs a { color: #7C7C7C }
+nav.breadcrumbs a:hover { color: #FFF }
+
+.generatedcontent nav.breadcrumbs li:before {
+	content: "›";
+	color: #7C7C7C;
+	margin-right: 5px;
+}
+
+.generatedcontent nav.breadcrumbs li:first-child:before {
+	content: "";
+	margin: 0px;
+}
+
+.generatedcontent nav.breadcrumbs li:last-child:after {
+	content: " ";
+	width: 0;
+	height: 0;
+	display: block;
+	background: red;
+	
+	border-top: 12px solid #181818;
+	border-bottom: 12px solid #181818;
+	border-left: 12px solid #292929;
+	
+	position: absolute;
+	right: -12px;
+	top: 0;
+}
+
+
+
+header.topo {
+	margin-top: 60px;
+	margin-bottom: 50px;
+	height: 50px;
+}
+
+header.topo h1 {
+	font-size: 4em;
+	float: left;
+}
+
+.fontface header.topo h1 {
+	font-family: Tangerine, cursive;
+}
+
+
+
+/* 2.5 - Menu Superior =================================== */
+
+
+header.topo nav.menu {
+	margin-top: 10px;
+	float: right;
+	font-size: 1.3em;
+}
+
+header.topo nav.menu li {
+	margin-left: 20px;
+}
+
+header.topo nav.menu li a { color: #EDEDED }
+header.topo nav.menu li a:hover { color: #AEAEAD }
+
+
+/* 3.0 - Lateral ========================================= */
+
+aside.lateral {
+	width: 300px;
+	background: blue;
+	float: right;
+}
+
+
+/* 4.0 - Rodapé ========================================== */
+
+
+
+/* 5.0 - Conteúdo ======================================== */
+
+section.conteudo {
+	width: 620px;
+	float: left;
+}
+
+section.conteudo article {
+	position: relative;
+	background: #F8F8F8;
+	color: #333;
+	padding: 20px;
+	margin-bottom: 40px;
+}
+
+section.conteudo article a {
+	color: #818181;
+	text-decoration: underline;
+}
+
+section.conteudo article h1 {
+	color: #181818;
+	font-weight: normal;
+	font-size: 1.4em;
+	margin-bottom: 10px;
+}
+
+section.conteudo article h1 a {
+	color: inherit;
+	text-decoration: none;
+}
+
+section.conteudo article time.publicado {	
+	background: #1E1E1E;
+	width: 40px;
+	height: 40px;
+	
+	text-align: center;
+	line-height: 1em;
+	color: #FFF;
+	font-size: .7em;
+	
+	position: absolute;
+	left: -40px;
+	top: 0px;
+}
+section.conteudo article time.publicado .dia {
+	display: block;
+	font-size: 1.4em;
+	margin: 7px 0 5px;
+}
+
+section.conteudo article footer {
+	border-top: 1px solid black;
+	background: #1D1D1D;
+	margin: 20px -20px -20px -20px;
+	padding: 10px 20px;
+	font-size: .7em;
+	line-height: 1.5em;
+	color: #636363;
+	
+	text-shadow: 1px 1px 1px #000;
+}
+
+section.conteudo article footer address { display: inline }
+
+section.conteudo article footer a { color: #636363; text-decoration: none }
+section.conteudo article footer a:hover { color: #FFF; text-decoration: underline; text-shadow: none }
+
+
+
+
